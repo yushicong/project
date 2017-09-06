@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="test-web-consumer:war exploded">
-    <output-path>$PROJECT_DIR$/test-web-consumer/target</output-path>
+    <output-path>$PROJECT_DIR$/test-web-consumer/target/consume</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -10,6 +10,7 @@
           <element id="archive" name="test-pubilc-interface-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="test-pubilc-interface" />
           </element>
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.5.3" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
           <element id="library" level="project" name="Maven: org.jboss.netty:netty:3.2.5.Final" />
@@ -83,7 +84,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/test-web-consumer/target/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/test-web-consumer/target/consume/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="test-web-consumer/web/Web" />
     </root>
