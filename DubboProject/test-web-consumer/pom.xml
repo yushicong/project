@@ -310,11 +310,6 @@
 			<version>1.0.9</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.hynnet</groupId>
-			<artifactId>oracle-driver-ojdbc6</artifactId>
-			<version>12.1.0.1</version>
-		</dependency>
 		<!-- http://mvnrepository.com/artifact/net.sf.ehcache/ehcache -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
@@ -323,6 +318,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>consume</finalName>
+		<finalName>test-web-consumer</finalName>
 	</build>
 </project>

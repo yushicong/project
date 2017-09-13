@@ -7,7 +7,6 @@ public class Start {
 //        PropertyConfigurator.configure("src/main/resources/log4j.properties");
 //    }
 	public static void main(String[] args) {
-		
 		com.alibaba.dubbo.container.Main.main(args);
 	}
 
