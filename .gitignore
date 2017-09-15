@@ -2,3 +2,11 @@
 /DubboProject/test-pubilc-interface/target
 /DubboProject/test-web-consumer/target
 /DubboProject/.idea
+/KafkaProject/target
+/MergeProject/test-dubbo-provider/target
+/MergeProject/test-pubilc-interface/target
+/MergeProject/test-web-consumer/target
+/KafkaProject/.idea
+/MergeProject/test-dubbo-provider/.idea
+/MergeProject/.idea
+/MergeProject/test-web-consumer/.idea
