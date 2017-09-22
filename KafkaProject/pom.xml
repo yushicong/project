@@ -38,7 +38,7 @@
 		 <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
+            <version>4.2.5.RELEASE</version>
             <scope>test</scope>
         </dependency>
 		 
@@ -62,23 +62,23 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>${spring.version}</version>
+			<version>4.2.5.RELEASE</version>
 			<type>jar</type>
 		</dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
+            <version>4.2.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
+            <version>4.2.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
+            <version>4.2.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.integration</groupId>
