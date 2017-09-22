@@ -12,3 +12,7 @@
 /MergeProject/test-web-consumer/.idea
 /DubboProject/test-dubbo-provider/.idea
 /DubboProject/test-web-consumer/.idea
+/TestProject/test-dubbo-provider/target
+/TestProject/out
+/TestProject/test-pubilc-interface/target
+/TestProject/test-web-consumer/target

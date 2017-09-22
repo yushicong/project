@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="hehe_provider" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="zookeeper://10.234.138.36:2181"/>
+	<!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20880" />
+	<!-- 具体的实现bean -->
+	<bean id="adminServiceInterface" class="com.ysc.serviceImpl.AdminServiceImpl" />
+	<bean id="adsServiceInterface" class="com.ysc.serviceImpl.AdsServiceImpl" />
+	<bean id="cartServiceInterface" class="com.ysc.serviceImpl.CartServiceImpl" />
+	<bean id="cityServiceInterface" class="com.ysc.serviceImpl.CityServiceImpl" />
+	<bean id="commentServiceInterface" class="com.ysc.serviceImpl.CommentServiceImpl" />
+	<bean id="goodServiceInterface" class="com.ysc.serviceImpl.GoodServiceImpl" />
+	<bean id="orderServiceInterface" class="com.ysc.serviceImpl.OrderServiceImpl" />
+	<bean id="provinceServiceInterface" class="com.ysc.serviceImpl.ProvinceServiceImpl" />
+	<bean id="typeServiceInterface" class="com.ysc.serviceImpl.TypeServiceImpl" />
+	<bean id="userServiceInterface" class="com.ysc.serviceImpl.UserServiceImpl" />
+
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:service interface="com.ysc.service.AdminServiceInterface" ref="adminServiceInterface" />
+	<dubbo:service interface="com.ysc.service.AdsServiceInterface" ref="adsServiceInterface" />
+	<dubbo:service interface="com.ysc.service.CartServiceInterface" ref="cartServiceInterface" />
+	<dubbo:service interface="com.ysc.service.CityServiceInterface" ref="cityServiceInterface" />
+	<dubbo:service interface="com.ysc.service.CommentServiceInterface" ref="commentServiceInterface" />
+	<dubbo:service interface="com.ysc.service.GoodServiceInterface" ref="goodServiceInterface" />
+	<dubbo:service interface="com.ysc.service.OrderServiceInterface" ref="orderServiceInterface" />
+	<dubbo:service interface="com.ysc.service.ProvinceServiceInterface" ref="provinceServiceInterface" />
+	<dubbo:service interface="com.ysc.service.TypeServiceInterface" ref="typeServiceInterface" />
+	<dubbo:service interface="com.ysc.service.UserServiceInterface" ref="userServiceInterface" />
+	
+</beans>
