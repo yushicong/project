@@ -72,11 +72,11 @@
         <property name="mapperLocations" value="classpath:mybatis/*/*.xml"></property>
     </bean>
 
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype" >
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
 
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
 		<property name="basePackage" value="com.cl.user.dao" />
 		<property name="sqlSessionTemplateBeanName" value="sqlSessionTemplate"></property>
 	</bean>
