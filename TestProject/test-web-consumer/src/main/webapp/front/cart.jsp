@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+    <a class="brand" href="index.jsp"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
     
 		<form class="form-inline navbar-search" method="post" action="../GoodController/selectGoodByNameAndType.do" >
 		<!-- 顶部的搜索栏 -->
@@ -152,14 +152,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera"/>
 			<div class="caption">
 			  <h5>Panasonic</h5>
-				<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+				<h4 style="text-align:center"><a class="btn" href="details.jsp"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
 			</div>
 		  </div><br/>
 			<div class="thumbnail">
 				<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
 				<div class="caption">
 				  <h5>Kindle</h5>
-				    <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+				    <h4 style="text-align:center"><a class="btn" href="details.jsp"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
 				</div>
 			  </div><br/>
 			<div class="thumbnail">
@@ -172,7 +172,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- Sidebar end=============================================== -->
 	<div class="span9">
     <ul class="breadcrumb">
-		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
 		<li class="active"> SHOPPING CART</li>
     </ul>
 	<h3>  SHOPPING CART [ ]<a href="../InitController/initIndex.do" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	

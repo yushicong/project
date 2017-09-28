@@ -1,6 +1,7 @@
 package com.ysc.serviceImpl;
 
 
+import com.ysc.bug.JVMmemory;
 import com.ysc.dao.OrderMapper;
 import com.ysc.model.*;
 import com.ysc.service.OrderServiceInterface;
@@ -19,6 +20,8 @@ public class OrderServiceImpl implements OrderServiceInterface {
 	}
 
 	public void insertOrderDetail(Cart cart) {
+		JVMmemory jvMmemory = new JVMmemory();
+		jvMmemory.heap();
 		// TODO Auto-generated method stub
 		mapper.insertOrderDetail(cart);
 	}

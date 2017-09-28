@@ -47,7 +47,7 @@ Page myPage =(Page)request.getAttribute("page");
 		//取到输入的页数
 		var page=document.getElementById("myPage").value;
 		//绝对路径
-		form.action="http://localhost:8080/sheji_3/OrderController/selectAllOrder.do?currentPage="+page;
+		form.action="../OrderController/selectAllOrder.do?currentPage="+page;
 		//提交
 		form.submit();
 		}

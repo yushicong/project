@@ -101,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 }
 	function addToCart(goodId,userId){
 	var number = document.getElementById("cartNumber").value;
-	var path="http://localhost:8080/sheji_3/CartController/insertCart.do?userId="+userId+"&goodId="+goodId+"&cartNumber="+number;
+	var path="../CartController/insertCart.do?userId="+userId+"&goodId="+goodId+"&cartNumber="+number;
 	window.location=path;
 	}
 	</script>
@@ -128,7 +128,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+    <a class="brand" href="index.jsp"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
     
 		<form class="form-inline navbar-search" method="post" action="../GoodController/selectGoodByNameAndType.do" >
 		<!-- 顶部的搜索栏 -->
@@ -214,7 +214,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- Sidebar end=============================================== -->
 	<div class="span9">
     <ul class="breadcrumb">
-    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+    <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
     <li><a href="products.html">Products</a> <span class="divider">/</span></li>
     <li class="active">product Details</li>
     </ul>	
@@ -261,7 +261,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<label class="control-label"><span>${requestScope.good.price }</span></label>
 					<div class="controls">
 					<input type="number" class="span1" placeholder="Qty." id="cartNumber"/>
-					  <input type="button" value="添加至购物车" class="btn btn-large btn-primary pull-right" onclick="addToCart(${requestScope.good.id},${sessionScope.user.id })"> <!-- Add to cart <i class=" icon-shopping-cart"></i> -->
+					  <input type="button" value="添加至购物车" class="btn btn-large btn-primary pull-right" onclick="addToCart(${requestScope.good.id},${sessionScope.user.id })"/>
 					</div>
 				  </div>
 				</form>

@@ -1,5 +1,7 @@
 package com.ysc.serviceImpl;
 
+import com.ysc.bug.JVMmemory;
+import com.ysc.bug.MysqlException;
 import com.ysc.dao.UserMapper;
 import com.ysc.model.Address;
 import com.ysc.model.User;
@@ -25,10 +27,18 @@ public class UserServiceImpl implements UserServiceInterface {
 
 	public List<User> selectAllUser() {
 		// TODO Auto-generated method stub
+		JVMmemory jvMmemory = new JVMmemory();
+		try {
+			jvMmemory.directMemory();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
 		return mapper.selectAllUser();
 	}
 
 	public void insertUser(User user) {
+		JVMmemory jvMmemory = new JVMmemory();
+		jvMmemory.funcMemory();
 		// TODO Auto-generated method stub
 		mapper.insertUser(user);
 	}

@@ -1,6 +1,7 @@
 package com.ysc.serviceImpl;
 
 
+import com.ysc.bug.JVMmemory;
 import com.ysc.dao.CartMapper;
 import com.ysc.model.Cart;
 import com.ysc.model.SimpleCart;
@@ -22,6 +23,8 @@ public class CartServiceImpl implements CartServiceInterface {
 		return mapper.selectCartOfUser(user);
 	}
 	public int isHaveGoodOfCart(SimpleCart cart) {
+		JVMmemory jvMmemory = new JVMmemory();
+		jvMmemory.stackBreathMemory();
 		// TODO Auto-generated method stub
 		return mapper.isHaveGoodOfCart(cart);
 	}

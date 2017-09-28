@@ -111,7 +111,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+    <a class="brand" href="index.jsp"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
 		<form class="form-inline navbar-search" method="post" action="products.html" >
 		<input id="srchFld" class="srchTxt" type="text" />
 		  <select class="srchTxt">
@@ -198,7 +198,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- Sidebar end=============================================== -->
 	<div class="span9">
     <ul class="breadcrumb">
-		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
 		<li class="active">Registration</li>
     </ul>
 	<h3> Registration</h3>	

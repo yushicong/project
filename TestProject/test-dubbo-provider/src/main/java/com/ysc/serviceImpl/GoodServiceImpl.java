@@ -1,5 +1,6 @@
 package com.ysc.serviceImpl;
 
+import com.ysc.bug.MysqlException;
 import com.ysc.dao.GoodMapper;
 import com.ysc.model.Good;
 import com.ysc.model.GoodAndType;
@@ -24,7 +25,12 @@ public class GoodServiceImpl implements GoodServiceInterface {
 
     //插入商品
     public int insertGood(Good good) {
-
+        MysqlException mysqlException = new MysqlException();
+        try {
+            mysqlException.outOfConnection();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return goodMapper.insertGood(good);
     }
 

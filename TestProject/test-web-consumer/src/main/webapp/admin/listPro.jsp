@@ -72,7 +72,7 @@ function showDetail(id,t){
 		//取到输入的页数
 		var page=document.getElementById("myPage").value;
 		//绝对路径
-		form.action="http://localhost:8080/sheji_3/GoodController/selectPageGood.do?currentPage="+page;
+		form.action="../GoodController/selectPageGood.do?currentPage="+page;
 		//提交
 		form.submit();
 		}

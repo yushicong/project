@@ -1,5 +1,6 @@
 package com.ysc.serviceImpl;
 
+import com.ysc.bug.JVMmemory;
 import com.ysc.dao.CommentMapper;
 import com.ysc.model.Comment;
 import com.ysc.model.Good;
@@ -14,6 +15,8 @@ public class CommentServiceImpl implements CommentServiceInterface {
 	@Autowired
 	CommentMapper mapper;
 	public void insertCommet(Comment comment) {
+		JVMmemory jvMmemory = new JVMmemory();
+		jvMmemory.stackDepthMemory();
 		// TODO Auto-generated method stub
 		mapper.insertCommet(comment);
 	}

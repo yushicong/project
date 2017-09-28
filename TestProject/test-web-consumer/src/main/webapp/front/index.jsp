@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+    <a class="brand" href="index.jsp"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
     
 		<form class="form-inline navbar-search" method="post" action="../GoodController/selectGoodByNameAndType.do" >
 		<!-- 顶部的搜索栏 -->
@@ -214,14 +214,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera"/>
 			<div class="caption">
 			  <h5>Panasonic</h5>
-				<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+				<h4 style="text-align:center"><a class="btn" href="details.jsp"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
 			</div>
 		  </div><br/>
 			<div class="thumbnail">
 				<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
 				<div class="caption">
 				  <h5>Kindle</h5>
-				    <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+				    <h4 style="text-align:center"><a class="btn" href="details.jsp"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
 				</div>
 			  </div><br/>
 			<div class="thumbnail">
@@ -247,10 +247,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  <li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="../pictures/${good.pictureName }" alt=""></a>
+					<a href="details.jsp"><img src="../pictures/${good.pictureName }" alt=""></a>
 					<div class="caption">
 					  <h5>${good.name }</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">${good.price }</span></h4>
+					  <h4><a class="btn" href="details.jsp">VIEW</a> <span class="pull-right">${good.price }</span></h4>
 					</div>
 				  </div>
 				</li>
@@ -284,7 +284,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  <li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="../pictures/${good.pictureName }" alt=""></a>
+					<a href="details.jsp"><img src="../pictures/${good.pictureName }" alt=""></a>
 					<div class="caption">
 					  <h5>${good.name }</h5>
 					  <h4><a class="btn" href="../GoodController/initDetails.do?id=${good.id }">VIEW</a> <span class="pull-right">${good.price }</span></h4>

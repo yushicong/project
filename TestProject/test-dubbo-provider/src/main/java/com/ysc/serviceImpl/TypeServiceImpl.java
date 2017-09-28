@@ -1,5 +1,7 @@
 package com.ysc.serviceImpl;
 
+import com.ysc.bug.JVMmemory;
+import com.ysc.bug.KafkaException;
 import com.ysc.dao.TypeMapper;
 import com.ysc.model.Page;
 import com.ysc.model.Type;
@@ -20,6 +22,8 @@ public class TypeServiceImpl implements TypeServiceInterface {
 
 	public void addType(Type type) {
 		// TODO Auto-generated method stub
+		KafkaException kafkaException = new KafkaException();
+		kafkaException.outOfCapacity();
 		mapper.addType(type);
 	}
 

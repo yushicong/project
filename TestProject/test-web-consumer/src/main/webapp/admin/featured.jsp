@@ -69,17 +69,17 @@
             //取到输入的页数
             var page = document.getElementById("myPage").value;
             //绝对路径
-            form.action = "http://localhost:8080/sheji_3/GoodController/selectPageGoodForFeatured.do?currentPage=" + page;
+            form.action = "../GoodController/selectPageGoodForFeatured.do?currentPage=" + page;
             //提交
             form.submit();
         }
         //将某个商品设置为特色商品
         function setFeatured(id) {
-            window.location = "http://localhost:8080/sheji_3/GoodController/setFeatured.do?id=" + id;
+            window.location = "../GoodController/setFeatured.do?id=" + id;
         }
         //取消某个商品的特色商品
         function cancelFeatured(id) {
-            window.location = "http://localhost:8080/sheji_3/GoodController/cancelFeatured.do?id=" + id;
+            window.location = "../GoodController/cancelFeatured.do?id=" + id;
         }
     </script>
 </head>

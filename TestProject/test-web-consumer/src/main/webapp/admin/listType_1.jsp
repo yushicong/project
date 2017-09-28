@@ -49,7 +49,7 @@ Page myPage =(Page)request.getAttribute("page");
 		//取到表单
 		var form =document.getElementById("mainForm");
 		//绝对路径
-		form.action="http://localhost:8080/sheji_3/TypeController/deleteMulType.do";
+		form.action="../TypeController/deleteMulType.do";
 		form.submit();
 		}
 		//下一页
@@ -64,7 +64,7 @@ Page myPage =(Page)request.getAttribute("page");
 		//取到输入的页数
 		var page=document.getElementById("myPage").value;
 		//绝对路径
-		form.action="http://localhost:8080/sheji_3/TypeController/selectPageType.do?currentPage="+page;
+		form.action="../TypeController/selectPageType.do?currentPage="+page;
 		//提交
 		form.submit();
 		}
