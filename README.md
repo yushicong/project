@@ -22,3 +22,4 @@ jdk    安装文档 : http://jingyan.baidu.com/article/3052f5a1f4de6797f21f866b.
 7.评论商品   栈空间 溢出 (深度)  </br>
 8.提交订单   堆空间 溢出  </br>
 9.发布商品   mysql死锁 </br>
+10.添加购物车  线程死锁  </br>
