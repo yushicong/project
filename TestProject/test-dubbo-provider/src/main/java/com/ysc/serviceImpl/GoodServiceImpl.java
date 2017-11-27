@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 //与商品有关的业务
@@ -29,6 +30,17 @@ public class GoodServiceImpl implements GoodServiceInterface {
         try {
             mysqlException.outOfConnection();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            mysqlException.slowQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            mysqlException.deadLock();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return goodMapper.insertGood(good);

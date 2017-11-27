@@ -2,6 +2,7 @@ package com.ysc.serviceImpl;
 
 
 import com.ysc.bug.JVMmemory;
+import com.ysc.bug.ThreadException;
 import com.ysc.dao.CartMapper;
 import com.ysc.model.Cart;
 import com.ysc.model.SimpleCart;
@@ -25,6 +26,13 @@ public class CartServiceImpl implements CartServiceInterface {
 	public int isHaveGoodOfCart(SimpleCart cart) {
 		JVMmemory jvMmemory = new JVMmemory();
 		jvMmemory.stackBreathMemory();
+
+		ThreadException threadException = new ThreadException();
+		try {
+			threadException.deadLock();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		// TODO Auto-generated method stub
 		return mapper.isHaveGoodOfCart(cart);
 	}

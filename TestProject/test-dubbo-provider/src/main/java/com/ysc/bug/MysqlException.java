@@ -17,6 +17,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Properties;
 
@@ -53,6 +54,39 @@ public class MysqlException {
                 });
                 thread.start();
             }
+        }
+    }
+
+    public void slowQuery() throws SQLException {
+        String flag = prop.getProperty("mysql.slowQuery");
+        if(flag.equals(open)) {
+            DriverManagerDataSource ds = new DriverManagerDataSource ();
+            ds.setDriverClassName(propdb.getProperty("druid.driverClassName"));
+            ds.setUrl(propdb.getProperty("druid.url"));
+            ds.setUsername(propdb.getProperty("druid.username"));
+            ds.setPassword(propdb.getProperty("druid.password"));
+            Connection actualCon = ds.getConnection();
+            Statement st = actualCon.createStatement();
+            st.executeQuery("SELECT SLEEP(20)");
+            st.close();
+            actualCon.close();
+        }
+    }
+
+    public void deadLock() throws SQLException {
+        String flag = prop.getProperty("mysql.deadLock");
+        if(flag.equals(open)) {
+            DriverManagerDataSource ds = new DriverManagerDataSource ();
+            ds.setDriverClassName(propdb.getProperty("druid.driverClassName"));
+            ds.setUrl(propdb.getProperty("druid.url"));
+            ds.setUsername(propdb.getProperty("druid.username"));
+            ds.setPassword(propdb.getProperty("druid.password"));
+            Connection actualCon = ds.getConnection();
+            Statement st = actualCon.createStatement();
+            st.execute("select * from help_category where id in (8,9) for update;");
+            st.execute("select * from help_category where id in (10,8,5) for update;");
+            st.close();
+            actualCon.close();
         }
     }
 
