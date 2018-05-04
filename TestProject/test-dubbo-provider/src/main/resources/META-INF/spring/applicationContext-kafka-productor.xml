@@ -49,7 +49,7 @@
     <int-kafka:producer-context id="producerContext" producer-properties="producerProperties">
         <int-kafka:producer-configurations> 
             <int-kafka:producer-configuration
-                broker-list="10.234.138.36:9092"
+                broker-list="117.122.248.85:9092"
                 key-serializer="stringSerializer"
                 value-class-type="java.lang.String" 
                 value-serializer="stringSerializer"

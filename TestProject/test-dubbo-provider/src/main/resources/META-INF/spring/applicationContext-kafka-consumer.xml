@@ -19,10 +19,10 @@
     <!-- zookeeper配置 可以配置多个 -->
     <int-kafka:zookeeper-connect
         id="zookeeperConnect"
-        zk-connect="10.234.138.36:2181"
-        zk-connection-timeout="150000"
-        zk-session-timeout="150000"
-        zk-sync-time="2000" />
+        zk-connect="117.122.248.85:2181"
+        zk-connection-timeout="1500000"
+        zk-session-timeout="1500000"
+        zk-sync-time="20000" />
     <!-- channel配置 auto-startup="true" 否则接收不发数据 -->
     <int-kafka:inbound-channel-adapter
         id="kafkaInboundChannelAdapter"
